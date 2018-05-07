@@ -6,43 +6,43 @@
 ## 1.数据库表设计
 
 ## 1.1. 图书表（book）
-|字段|类型|长度|小数点|主键，外键|可以为空|
-|:-------:|:-------:|:----:|-------------:|:------:|:----:|
-|id|int|10|0|主键|no|
-|ISBN|varchar|13|0|主键|no|
-|name|varchar|255|0| |no|
-|publisher|varchar|255|0| |yes|
-|author|varchar|40|0| |yes|
-|price|varchar|40|1| |yes|
-|copucount|int|10|0| |yes|
-|stock|int|10|0| |yes|
-|description|varchar|255|0| |yes|
-|photo|binary|255|0| |yes|
+|字段|类型|长度|小数点|主键，外键|可以为空|默认值|约束|说明|
+|:-------:|:-------:|:----:|-------------:|:------:|:----:|:----:|:----:|:----:|
+|id|int|10|0|主键|no| | |自动增长的id|
+|ISBN|varchar|13|0|主键|no| | |图书唯一的ISBN| 
+|name|varchar|255|0| |no| | | 图书的名字|
+|publisher|varchar|255|0| |yes| 空| | 图书的出版社|
+|author|varchar|40|0| |yes| 空| | 图书的作者|
+|price|varchar|40|1| |yes| 空| | 图书的价格|
+|copucount|int|10|0| |yes| | | |
+|stock|int|10|0| |yes| | | |
+|description|varchar|255|0| |yes| 空| | 图书的描述内容|
+|photo|binary|255|0| |yes| 空| | 图书的照片|
 
 ## 1.2. 用户信息表(user)
-|字段|类型|长度|小数点|主键，外键|可以为空|
-|:-------:|:-------:|:----:|-------------:|:------:|:----:|
-|id|int|10|0|主键|no|
-|account|varchar|30|0|主键|no|
-|password|varchar|30|0| |yes|
+|字段|类型|长度|小数点|主键，外键|可以为空|默认值|约束|说明|
+|:-------:|:-------:|:----:|-------------:|:------:|:----:|:----:|:----:|:----:|
+|id|int|10|0|主键|no|　|　|　|　
+|account|varchar|30|0|主键|no|　|　　|　登录用户名|　
+|password|varchar|30|0| |yes| |　 |　登录密码 |　
 |name|varchar|30|0| |yes|
-|role|int|2|0| |yes|
-|age|int|3|0| |yes|
-|gender|varchar|1|0| |yes|
-|signature|vachar|255|0| |yes|
+|role|int|2|0| |yes|2 | | 角色选择 管理员为1 和普通用户为2 |
+|age|int|3|0| |yes| |三位数以下 | 用户的年龄|
+|gender|varchar|1|0| |yes| | |用户的性别 |
+|signature|vachar|255|0| |yes| | | 用户的头像|
 
 ## 1.3.借书还书表(lend)
-|字段|类型|长度|小数点|主键，外键|可以为空|
-|:-------:|:-------:|:----:|-------------:|:------:|:----:|
-|id|int|10|0|主键|no|
-|ISBN|varchar|13|0| |no|
-|book_name|varchar|30|0| |yes|
-|account|varchar|30|0| |no|
-|reader_name|varchar|30|0| |yes|
-|count|int|10|0| |no|
-|lend_data|datetime|0|0| |yes|
-|isreturn|tinyint|1|0| |no|
-|return_date|detetime|0|0| |yes|
+|字段|类型|长度|小数点|主键，外键|可以为空|默认值|约束|说明|
+|:-------:|:-------:|:----:|-------------:|:------:|:----:|:----:|:----:|:----:|
+|id|int|10|0|主键|no| | | |
+|ISBN|varchar|13|0| |no| | | 图书的ISBN|
+|book_name|varchar|30|0| |yes| | | 图书名字|
+|account|varchar|30|0| |no| | | 登录账户|
+|reader_name|varchar|30|0| |yes| | |读者姓名|
+|count|int|10|0| |no| | |账户数|
+|lend_data|datetime|0|0| |yes| | | 借书日期|
+|isreturn|tinyint|1|0| |no| | | 是否归还|
+|return_date|detetime|0|0| |yes| | | 归还日期|
 
 ***
 
