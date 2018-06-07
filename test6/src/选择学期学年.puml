@@ -1,0 +1,27 @@
+ @startuml
+        skinparam sequenceParticipant underline
+        actor "：student" as User #black
+        note left of User #bbb
+            选择学期学年
+        end note
+        participant "：学年" as A
+        participant "：学期" as B
+         participant "：Enter" as C
+        alt
+            User -[#red]> A:选择
+            activate User
+            activate A
+            activate B
+            activate C
+            A -[#red]> B:选择
+            B-[#red]> C:点击
+            deactivate User
+            deactivate A
+            deactivate B
+            deactivate C
+            C --[#red]>User:跳转进入选择学年学期的课程及成绩中心
+        activate User
+        deactivate User
+        deactivate A
+        end
+@enduml

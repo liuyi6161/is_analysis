@@ -1,0 +1,89 @@
+@startuml
+title 基于GitHub的实验管理平台--类图
+
+abstract class users  #DDEEFF{
+     <b>user_id</b> （用户ID）
+        name （用户真实姓名）
+        github_username （用户GitHub账号）
+        update_date （用户GitHub账号修改日期）
+        password （用户密码）
+        disable （用户是否禁用）
+}
+
+class teachers  #DDEEFF{
+     <b>teacher_id</b> （老师工号）
+        department （老师所属部门）
+}
+
+class students  #DDEEFF{
+     <b>student_id</b> （学号）
+        class （班级）
+        result_sum（成绩汇总）
+        web_sum （网站正确与否汇总）
+        GitHub  （GitHub账号）
+}
+class login #DDEEFF{
+      <b>username</b>  （用户名）
+         password  （密码）
+}
+
+class class #DDEEFF{
+    <b>class_id</b> （班级id）
+    name（班级名称）
+    department_id （所属院系id）
+    major （专业）
+}
+
+class department #DDEEFF{
+    <b>department_id</b>（院系id）
+    name （院名）
+    desc （院系简介）
+}
+
+
+class courses #DDEEFF{
+    <b>course_id</b>（课程编号）
+    course_name（课程名称）
+    course_desc（课程简介）
+}
+
+class terms #DDEEFF{
+    <b>term_id</b>（学期编号）
+    term-year（学年）
+}
+
+class tests  #DDEEFF{
+    <b>test_id</b> （实验编号）
+    teacher_id（发布实验的教师id）
+    course_id（课程id）
+    title （实验名称）
+    desc （实验内容简介）
+    link （实验的github链接）
+}
+
+class grades  #DDEEFF{
+    <b>student_id</b> （学号）
+    <b>test_id</b> （实验编号）
+    result （分数）
+    memo （评价）
+    each_score （每个实验的每一项考点得分数）
+    update_date （评改日期）
+}
+
+users <|- students
+users <|-- teachers
+users <|-- login
+
+students "n" -- "1"  class
+teachers "n" -- "1"  department
+class "n" -- "1" department
+students "1" -- "n"  courses
+teachers "n" -- "n"  courses
+teachers "1" -- "n"  tests
+courses  "1" -- "n"  tests
+courses "n" - "n"  terms
+students "1" -- "n"  grades
+tests "1" - "n"  grades
+
+
+@enduml
