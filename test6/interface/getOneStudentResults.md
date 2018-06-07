@@ -1,5 +1,5 @@
 # 接口：getOneStudentResults  [返回](../README.md)
-用例： [个人成绩中心顺序图](../useCase/个人成绩中心顺序图.md)，[评定成绩](../useCase/评定成绩.md)
+用例： [个人成绩中心顺序图](../useCase/个人成绩中心.md)，[评定成绩](../useCase/评定成绩.md)
 
 - 功能：
     返回一个学生的所有实验成绩和实验评价。
