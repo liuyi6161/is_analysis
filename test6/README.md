@@ -31,7 +31,7 @@
 - ### [“登录”用例](./useCase/登录.md),[界面](https://liuyi6161.github.io/is_analysis/test6/UI/login.html)
 - ### [“学生登录”用例](./useCase/学生登录.md),[界面](https://liuyi6161.github.io/is_analysis/test6/UI/login-student.html)
 - ### [“选择学年/学期”用例](./useCase/选择学期年.md),[界面](https://liuyi6161.github.io/is_analysis/test6/UI/personalscore.html)
-- ### [“个人成绩中心”用例](./useCase/查看成绩.md),[界面](https://liuyi6161.github.io/is_analysis/test6/UI/personalscore2017-2018-2.html)
+- ### [“个人成绩中心”用例](./useCase/个人成绩中心.md),[界面](https://liuyi6161.github.io/is_analysis/test6/UI/personalscore2017-2018-2.html)
 - ### [“单科实验成绩详情”用例](./useCase/单科实验成绩详情.md),[界面](https://liuyi6161.github.io/is_analysis/test6/UI/infosystemscore.html)
 - ### [“查看个人信息”用例](./useCase/查看个人信息.md),[界面](https://liuyi6161.github.io/is_analysis/test6/UI/personalinfo.html)
 - ### [“修改个人信息”用例](./useCase/修改个人信息.md),[界面](https://liuyi6161.github.io/is_analysis/test6/UI/personalinfo.html)
